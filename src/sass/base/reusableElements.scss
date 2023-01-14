@@ -3,6 +3,13 @@
   max-width: 100%;
 }
 
+.logo {
+  transition: all 0.3s;
+  &:hover {
+    transform: scale(1.05);
+  }
+}
+
 .btn {
   padding: 9px;
   min-height: 41px;
@@ -13,6 +20,8 @@
   border-radius: $border-radius;
   text-align: center;
   overflow: hidden;
+  position: relative;
+  transition: all 0.3s;
 
   &:before {
     content: "";
@@ -23,41 +32,52 @@
     left: 0;
     opacity: 0;
     transition: all 0.3s;
+
     background-color: black;
   }
 
   &:hover {
     &:before {
-      opacity: 0.06;
+      opacity: 0.08;
     }
   }
 
   &:active {
     &:before {
-      opacity: 0.12;
+      opacity: 0.18;
     }
   }
+}
 
-  &--white {
-    // color: white;
-    --color: white;
-  }
+.btn--small {
+  min-height: 33px;
+  padding: 0px 14px;
+}
 
-  &--green {
-    color: white;
-    background-color: $color-green;
-    --color: #{$color-green};
-  }
+.btn--white {
+  // color: white;
+  --color: white;
+  font-size: 15px;
+  line-height: 1;
+}
 
-  &--grey {
-    background-color: $color-grey;
-    --color: #{$color-grey};
-  }
+.btn--green {
+  color: white;
+  background-color: $color-green;
+  --color: #{$color-green};
+}
 
-  &--outlined {
-    color: var(--color);
-    border: 1px solid var(--color);
-    background-color: transparent;
+.btn--grey {
+  background-color: $color-grey;
+  --color: #{$color-grey};
+}
+
+.btn--outlined {
+  color: var(--color);
+  border: 1px solid var(--color);
+  background-color: transparent;
+  &:before {
+    background-color: var(--color);
   }
 }
 
