@@ -81,6 +81,22 @@
   }
 }
 
+.title {
+  font-weight: 700;
+
+  &-1 {
+    font-size: 36px;
+    // margin-bottom: 35px;
+  }
+
+  &-2 {
+    font-size: 18px;
+  }
+}
+
+.desc {
+}
+
 @screen md {
   .container {
     padding: 0 40px;
