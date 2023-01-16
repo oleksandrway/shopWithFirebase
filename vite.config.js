@@ -1,5 +1,4 @@
 
-// import { defineConfig } from 'vite'
 import path from 'path';
 import WindiCSS from 'vite-plugin-windicss'
 

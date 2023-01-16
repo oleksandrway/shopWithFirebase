@@ -1,10 +1,6 @@
 
-// function createElement() {
-
-// }
 
 function createModal(preContent) {
-  // const precontent = document.querySelector(modalContent);
   let content
   if (!preContent || typeof preContent === 'string') {
     console.warn('you should pass an element in function openModal')
@@ -45,7 +41,6 @@ function createModal(preContent) {
 
   modalClose.addEventListener('click', removeModal)
   defaultOverlay.addEventListener('click', (e) => {
-    // if (e.target === defaultOverlay || e.target.dataset.closeModal) {
     if (e.target === defaultOverlay) {
       removeModal(defaultOverlay)
     }
@@ -60,9 +55,6 @@ function createModal(preContent) {
 }
 
 function openModal(modalClass) {
-  // const content = document.querySelector(modalClass).cloneNode(true);
-  // const content = document.querySelector(modalClass);
-
   const defaultModal = createModal(modalClass)
 
   document.body.appendChild(defaultModal)
